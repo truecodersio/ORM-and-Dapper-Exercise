@@ -19,6 +19,8 @@ namespace ORM_Dapper
             var departmentRepo = new DapperDepartmentRepository(conn);
             var departments = departmentRepo.GetAllDepartments();
 
+            departmentRepo.InsertDepartment("More Fun Stuff");
+
             foreach (var department in departments)
             {
                 Console.WriteLine($"{department.Name} {department.DepartmentID}\n");
