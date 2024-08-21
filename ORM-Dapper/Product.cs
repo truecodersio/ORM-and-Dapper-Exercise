@@ -3,13 +3,14 @@ namespace ORM_Dapper
 {
 	public class Product
 	{
-		public int productId { get; set; }
-		public string name { get; set; }
-		public int price { get; set; }
-		public int categoryID { get; set; }
-		public bool onSale { get; set; }
-		public string stockLevel { get; set; }
-		
+		//here add each columns from the products table inside the best buy db as properties
+
+		  public int ProductID { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set; }
+        public int CategoryID { get; set; }
+        public int OnSale { get; set; }
+        public string StockLevel { get; set; }
 	}
 }
 
