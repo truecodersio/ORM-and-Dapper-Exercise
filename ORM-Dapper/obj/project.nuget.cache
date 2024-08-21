@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AoudRLes6Q34N7iaQ2R+V3WAqVje527oN74e+hpe7Ou7KHcZiXS+TKcD4EyYdKEE47byVIf8B3eZJZDGt6b5vw==",
+  "dgSpecHash": "KsspnVBAE+I=",
   "success": true,
   "projectFilePath": "/Users/justinsimon/Desktop/repos3/DapperExerciseRedo/ORM-Dapper/ORM-Dapper.csproj",
   "expectedPackageFiles": [
@@ -23,10 +23,7 @@
     "/Users/justinsimon/.nuget/packages/system.security.principal.windows/4.4.0/system.security.principal.windows.4.4.0.nupkg.sha512",
     "/Users/justinsimon/.nuget/packages/system.text.encoding.codepages/4.4.0/system.text.encoding.codepages.4.4.0.nupkg.sha512",
     "/Users/justinsimon/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/justinsimon/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
-    "/Users/justinsimon/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.31/microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512",
-    "/Users/justinsimon/.nuget/packages/microsoft.netcore.app.host.osx-x64/6.0.31/microsoft.netcore.app.host.osx-x64.6.0.31.nupkg.sha512",
-    "/Users/justinsimon/.nuget/packages/microsoft.netcore.app.ref/6.0.31/microsoft.netcore.app.ref.6.0.31.nupkg.sha512"
+    "/Users/justinsimon/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
