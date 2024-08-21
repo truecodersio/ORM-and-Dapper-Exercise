@@ -16,8 +16,11 @@ namespace ORM_Dapper
 
         public void CreateProduct(string name, double price, int categoryID)
         {
-			//_conn.Execute("INSERT INTO departments Name Values(@name);", new { name = name });
-             _connection.Execute("INSERT INTO products Name Values(@name);" , new {name = name});
+			//the @ variables inside the sql statement should all match the 
+			//arguments of the method e.g string name = @name
+            _connection.Execute("INSERT INTO products (Name, Price, CategoryID) " +
+                                "VALUES (@name, @price, @categoryID);"
+                , new {name = name, price = price, categoryID = categoryID});
         }
 
 			//dapper extends idbconnections
@@ -30,15 +33,25 @@ namespace ORM_Dapper
             return _connection.Query<Product>("SELECT * FROM products;");
         }
         
-		public IEnumerable<Product> UpdateProduct()
-		{
-			throw new NotImplementedException();
-		}
+		public void UpdateProductName(int productID, string updatedName)
+        {
+            _connection.Execute("UPDATE products SET Name = @updatedName WHERE ProductID = @productID;",
+                new { updatedName = updatedName, productID = productID });
+        }
 
-		public IEnumerable<Product> DeleteProduct()
-		{
-			throw new NotImplementedException();
-		}
+		 public void DeleteProduct(int productID)
+        {
+            _connection.Execute("DELETE FROM reviews WHERE ProductID = @productID;",
+                new { productID = productID });
+
+            _connection.Execute("DELETE FROM sales WHERE ProductID = @productID;",
+               new { productID = productID });
+
+            _connection.Execute("DELETE FROM products WHERE ProductID = @productID;",
+               new { productID = productID });
+        }
+
+		
     }
 }
 

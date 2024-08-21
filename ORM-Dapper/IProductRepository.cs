@@ -5,7 +5,7 @@ namespace ORM_Dapper
 	{
 		//The methods that the DapperProductRepository will have to inherit from 
 		IEnumerable<Product> GetAllProducts(); //stubbed method	
-void CreateProduct(string name, double price, int categoryID); //stubbed method
+		void CreateProduct(string name, double price, int categoryID); //stubbed method
 
 		
 	}
