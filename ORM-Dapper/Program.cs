@@ -3,6 +3,7 @@ using System.Data;
 using System.IO;
 using MySql.Data.MySqlClient;
 using Microsoft.Extensions.Configuration;
+using System.Security.Cryptography.X509Certificates;
 
 
 namespace ORM_Dapper
@@ -18,7 +19,26 @@ namespace ORM_Dapper
                             .Build();
 
             string connString = config.GetConnectionString("DefaultConnection");
+            //link to sql server 
+            //calling the dapper methods
+
             IDbConnection conn = new MySqlConnection(connString);
+            var repo = new DapperDepartmentRepository(conn);
+           
+           var departments =  repo.GetDepartments();
+            
+            foreach(var department in departments)
+            {
+                Console.WriteLine($" The dept id is:{department.DepartmentID} and the name is: {department.Name}");
+                Console.WriteLine("");
+
+            }
+
+            
         }
-    }
+
+           
+        }
 }
+
+
