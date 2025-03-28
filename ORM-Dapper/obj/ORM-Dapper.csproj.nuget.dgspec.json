@@ -50,9 +50,17 @@
               "target": "Package",
               "version": "[2.1.28, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
-              "version": "[9.0.0-preview.1.24080.9, )"
+              "version": "[9.0.0, )"
             },
             "MySql.Data": {
               "target": "Package",
